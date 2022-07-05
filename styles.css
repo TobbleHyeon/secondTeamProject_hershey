@@ -1,0 +1,1240 @@
+@charset "utf-8";
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+}
+
+
+.wrap {
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+.hd,
+.main,
+.products,
+.company,
+.recpie,
+footer {
+    margin: 0 auto;
+}
+
+.readmore {
+    /* border: 1px solid red; */
+    border-radius: 15px;
+    padding: 1vh 1vw;
+    color: white;
+    background-color: #7C0026;
+    transition: .5s;
+    font-size: 1vw;
+}
+
+.readmore:hover {
+    background-color: #B10238;
+}
+
+/* 백그라운드 비디오 영역 */
+.main_video {
+    /* border: 3px solid green; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 99vw;
+    /* min-height: 400px; */
+    top: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* 헤더 영역 */
+.hd {
+    max-height: 100px;
+    padding: 30px 0;
+    border-bottom: 1px solid white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hd::before {
+    content: "";
+    position: absolute;
+    width: 99vw;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hd_logo {
+    position: absolute;
+    width: 12vh;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.hd_gnb {
+    display: flex;
+    justify-content: center;
+}
+
+.hd_gnb * {
+    color: white;
+}
+
+.hd_gnb>li>a {
+    padding: 2rem 1.5rem;
+    font-size: 1.5vw;
+}
+
+.hd_gnb>li:first-child>a {
+    position: relative;
+}
+
+.hd_gnb>li:first-child::after {
+    content: "";
+    width: 203vh;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .5s;
+}
+
+.hd_gnb>li:first-child:hover::after {
+    height: 6vh;
+}
+
+.hd_gnb>li>a:hover {
+    color: #B10238;
+}
+
+.hd_gnb>li:hover .hd_sub {
+    opacity: 1;
+    height: 25px;
+}
+
+.hd_sub {
+    display: flex;
+    position: absolute;
+    top: 120%;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 1;
+}
+
+.hd_sub>li>a {
+    padding: 5rem 2rem;
+    font-size: 1.10vw;
+    text-align: center;
+}
+
+.hd_sub>li>a:hover {
+    color: #B10238;
+}
+
+.ham {
+    display: none;
+}
+
+/* 섹션1 영역 */
+.main {
+    height: 44vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .main_button {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%, -3%);
+}
+
+.main .main_button a {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 1.5vh 2vw;
+    margin: 0 20px;
+    color: white;
+    background-color: #7C0026;
+    transition: .5s;
+    font-size: 1vw;
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.main .main_button a:hover {
+    background-color: #B10238;
+}
+
+/* 섹션2 영역 */
+
+/* 섹션2 - 배너*/
+.products {
+    height: 110vh;
+    background-color: #F5F2F2;
+}
+
+.products>* {
+    margin: auto;
+}
+
+.products .pd_banner {
+    width: 100%;
+    height: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(./img/section2/section2_background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.products .pd_banner h2 {
+    font-size: 2.5vw;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.products .pd_banner p {
+    font-size: 1.75vw;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.pd_banner>* {
+    margin-right: 5vw;
+}
+
+.pd_line {
+    width: 100vh;
+    height: 70vh;
+    position: relative;
+    /* border: 3px solid green; */
+}
+
+/* 섹션2 - 상품 리스트 아이콘*/
+.pd_line>p {
+    position: absolute;
+    border-radius: 2vh;
+    bottom: 5%;
+    margin-left: 30px;
+    width: 15vh;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+    box-shadow: 0 0 5px #c3c3c3;
+    color: #7C0026;
+    background-color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.pd_line>p:hover {
+    box-shadow: 0 0 3px #7C0026;
+}
+
+.pd_line>.click1 {
+    left: 2%;
+}
+
+.pd_line>.click2 {
+    left: 22%;
+}
+
+.pd_line>.click3 {
+    left: 42%;
+}
+
+.pd_line>.click4 {
+    left: 63%;
+}
+
+.pd_line>.click5 {
+    left: 83%;
+}
+
+
+/* 섹션2 - Go Product 아이콘*/
+.pd_line>div>a {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    padding: 10px 30px;
+    color: white;
+    background-color: #7C0026;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.pd_line>div>a:hover {
+    background-color: #B10238;
+}
+
+/* 섹션2 - 상품 리스트 이미지*/
+
+.pd_line>div {
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
+    top: 45%;
+    left: 50%;
+    border-radius: 15px;
+    transform: translate(-45%, -50%);
+    background-color: white;
+    box-shadow: 0 0 5px #c3c3c3;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.pd_line>div>img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pd_line .pd_wrap5>img {
+    width: 90%;
+    left: 5%;
+}
+
+.pd_line>div {
+    display: none;
+}
+
+.pd_line>div.on {
+    display: block;
+}
+
+/* 섹션3 영역 */
+
+/* 섹션3 - 허쉬소개 제목, 밀튼 허쉬 이미지 */
+.company {
+    position: relative;
+    height: 240vh;
+    background-color: #F5F2F2;
+}
+
+.company .cp_banner {
+    width: 100%;
+    height: 24vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(./img/section3/section3_background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.cp_banner>* {
+    margin-left: 11vw;
+}
+
+.cp_banner h3 {
+    font-size: 3.5vw;
+    font-weight: 300;
+    margin-top: 150px;
+    margin-bottom: 15px;
+}
+
+.cp_banner p {
+    font-size: 1.75vw;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.cp_banner .milton_img {
+    width: 13vw;
+}
+
+.milton_img img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* 섹션3 - 밀튼허쉬 옆 텍스트 */
+
+.milton_inner {
+    position: relative;
+}
+
+.cp_milton {
+    position: absolute;
+    top: -23%;
+    left: 20%;
+    transform: translate(23%, -20%);
+}
+
+.cp_milton a {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-45%);
+}
+
+.milton_text>* {
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.milton_text strong {
+    display: block;
+    font-size: 2vw;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.milton_text p:nth-of-type(1) {
+    margin-bottom: 30px;
+}
+
+.milton_text p:nth-of-type(3) {
+    display: none;
+}
+
+/* 섹션3 - 밀튼허쉬 아래 배너 2개 */
+.cp_inner {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cp_inner>div {
+    width: 35vw;
+    height: 20vh;
+    padding: 4vh 8vw;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 5px #c3c3c3;
+}
+
+.cp_inner>div>a {
+    position: absolute;
+    right: 0.5vw;
+    bottom: 0.5vh;
+}
+
+.cp_line,
+.cp_material {
+    position: relative;
+    margin-right: 1vw;
+    background-repeat: no-repeat;
+    color: #7C0026;
+
+}
+
+.cp_line {
+    background-color: white;
+    background-image: url(./img/section3/ourstory_process_pod3.png);
+    background-position: left;
+    background-size: 40%;
+}
+
+.cp_material {
+    background-color: white;
+    background-image: url(./img/section3/milk_saved.png);
+    background-position: 5% 50%;
+    background-size: 24%;
+}
+
+.line_text {
+    position: absolute;
+    width: 25vw;
+    top: 15%;
+    left: 130%;
+    transform: translateY(-15%);
+    transform: translateX(-130%);
+}
+
+.material_text {
+    width: 25vw;
+    position: absolute;
+    top: 15%;
+    left: 90%;
+    transform: translate(-15%);
+    transform: translateX(-90%);
+}
+
+.line_text>strong,
+.material_text>strong {
+    display: block;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.line_text>p,
+.material_text>p {
+    font-size: 0.9vw;
+}
+
+.line_text>p:nth-of-type(2),
+.material_text>p:nth-of-type(2) {
+    margin-top: 15px;
+}
+
+/* 섹션3 - 기업 콜라보 - 텍스트 */
+
+.collabo_text {
+    margin: 10vh 0 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #7C0026;
+}
+
+.collabo_text strong {
+    font-size: 3vw;
+    font-weight: 300;
+    margin-bottom: 5vh;
+
+}
+
+.collabo_text p {
+    font-size: 1.7vw;
+}
+
+/* 섹션3 - 기업 콜라보 - 이미지 */
+
+.collabo_img_up {
+    margin: 0 4vw 5vh;
+    display: flex;
+    justify-content: flex-start;
+    color: #7C0026;
+}
+
+.angel,
+.mcdonald,
+.etude {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vw;
+    width: 20vw;
+    height: 25vw;
+    box-shadow: 0 10px 10px #4f4c4c;
+}
+
+.imgup_inner {
+    position: relative;
+    overflow: hidden;
+    width: 18vw;
+    height: 20vw;
+    margin-bottom: 2vh;
+}
+
+
+.imgup_inner>img {
+    width: 100%;
+}
+
+.collabo_img_up > p {
+    font-size: 1vw;
+}
+
+.collabo_img_down {
+    margin: 0 3vw 5vw;
+    display: flex;
+    justify-content: flex-end;
+    color: #7C0026;
+}
+
+
+.lotteria,
+.dunkin,
+.seoju {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vw;
+    width: 20vw;
+    height: 24vw;
+    box-shadow: 0 10px 10px #c3c3c3;
+}
+
+.imgdown_inner {
+    position: relative;
+    overflow: hidden;
+    width: 18vw;
+    height: 18vw;
+    margin-bottom: 4vh;
+}
+
+.imgdown_inner img {
+    width: 100%;
+    position: absolute;
+}
+
+.imgup_inner+p,
+.imgdown_inner+p {
+    font-size: 1vw;
+}
+
+.imgup_inner>img,
+.imgdown_inner>img {
+    transition: .5s;
+}
+
+.imgup_inner:hover img,
+.imgdown_inner:hover img {
+    transform: scale(1.2);
+}
+
+/* 섹션4 영역 */
+
+/* 섹션4 - 이미지 배너 */
+
+.recipe {
+    width: 100%;
+    background-color: #F5F2F2;
+}
+
+.recipe .recipe_banner {
+    width: 100%;
+    height: 19vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(./img/section4/section4_background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.recipe_banner>* {
+    margin-right: 8vw;
+}
+
+.recipe_banner h4 {
+    font-size: 2.5vw;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.recipe_banner p {
+    font-size: 1.75vw;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* 섹션4 - 이미지 슬라이드 영역 */
+
+.recipe_slide {
+    width: 200vw;
+    margin: 5vh 0;
+    padding: 10vh 0;
+    display: flex;
+    color: #7C0026;
+    font-size: 1.25rem;
+    animation-name: recipe_slide;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+
+@keyframes recipe_slide {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: -100%;
+    }
+}
+
+
+.recipe_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px #c3c3c3;
+    background-color: white;
+    border-radius: 15px;
+    width: 20vw;
+    height: 18vw;
+    margin-right: 2vw;
+    white-space: nowrap;
+}
+
+.recipe_menu > p {
+    font-size: 1.2vw;
+}
+
+.menu_inner {
+    width: 18vw;
+    height: 10vw;
+    margin-bottom: 3vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu_inner>img {
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.menu_inner:hover img {
+    transform: scale(1.2);
+}
+
+.menu_inner>a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 180px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    translate: .5s;
+}
+
+.recipe_text {
+    text-align: center;
+}
+
+.menu_inner:hover a {
+    display: block;
+}
+
+/* 푸터 영역 */
+
+/* 푸터 상단 영역 */
+footer {
+    background-color: #F5F2F2;
+    height: 35vh;
+}
+
+.footer_top {
+    position: relative;
+    height: 10vh;
+    background-color: rgba(124, 0, 38, 0.45);
+}
+
+.ft_logo,
+.sns_logo {
+    position: absolute;
+}
+
+.ft_logo {
+    width: 7vw;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ft_logo img {
+    width: 12vh;
+}
+
+.sns_logo {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 푸터 하단 영역 */
+.familysite {
+    height: 4vh;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+}
+
+.footer_bottom {
+    height: 22vh;
+    position: relative;
+    margin: 3vh 0;
+}
+
+.ftbottom_left,
+.ftbottom_right {
+    position: absolute;
+    color: #919090;
+}
+
+.ftbottom_left {
+    margin-left: 1vw;
+    left: 0;
+    top: 60%;
+    transform: translateY(-60%);
+}
+
+.ftbottom_right {
+    margin-right: 1vw;
+    right: 0;
+    top: 60%;
+    transform: translateY(-60%);
+    text-align: right;
+}
+
+.ftbottom_left>p,
+.ftbottom_right>p {
+    font-size: 0.9vw;
+}
+
+.sns_logo>a {
+    display: inline-block;
+    margin-left: 1vw;
+    width: 2.5vw;
+    height: 5vh;
+}
+
+.sns_logo>a:nth-of-type(3) {
+    margin-right: 1vw;
+}
+
+.sns_logo>a>img {
+    width: 100%;
+}
+
+/* 미디어쿼리 시작 */
+
+@media (max-width:768px) {
+    /* 헤더 영역 */
+    .wrap {
+        width: 768px;
+        overflow: hidden;
+    }
+
+    .main_video {
+        width: 100%;
+    }
+
+    .hd_logo {
+        position: absolute;
+        /* width: 15vw; */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hd {
+        position: relative;
+        width: 100%;
+        height: 70px;
+    }
+
+    .hd::before {
+        width: 100%;
+
+    }
+
+    nav {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .hd_gnb>li:first-child>a::after {
+        display: none;
+    }
+
+    /* 섹션1 미디어 쿼리 */
+
+    .main {
+        width: 768px;
+        height: 39vh;
+    }
+
+    .main .main_button a {
+        display: none;
+    }
+
+    .main::after {
+        width: 100%;
+        height: 8vh;
+    }
+
+    /* 섹션2 미디어 쿼리 */
+    .products {
+        height: 95vh;
+    }
+
+    /* 섹션2 - 배너*/
+    .products .pd_banner {
+        height: 25vh;
+        align-items: center;
+    }
+
+    .pd_banner>* {
+        margin-right: 0;
+    }
+
+    .products .pd_banner h2 {
+        margin-top: 1rem;
+        font-size: 4.5vw;
+    }
+
+    .products .pd_banner p {
+        font-size: 3.0vw
+    }
+
+    /* 섹션2 - 상품 리스트 이미지 및 아이콘*/
+    .products .pd_line {
+        position: relative;
+    }
+
+    .products .pd_line>div {
+        position: absolute;
+        top: 15%;
+        left: 32%;
+        transform: none;
+    }
+
+    .products .pd_line>p {
+        width: 18vw;
+        height: 8vh;
+        line-height: 8vh;
+    }
+
+    .pd_line>.click1 {
+        left: 0%;
+        top: 16%;
+    }
+
+    .pd_line>.click2 {
+        left: 0%;
+        top: 32%;
+    }
+
+    .pd_line>.click3 {
+        left: 0%;
+        top: 47%;
+    }
+
+    .pd_line>.click4 {
+        left: 0%;
+        top: 62%;
+    }
+
+    .pd_line>.click5 {
+        left: 0%;
+        top: 77%;
+    }
+
+    /* 섹션3 미디어 쿼리 */
+
+    /* 섹션3 - 허쉬소개 제목, 밀튼 허쉬 이미지 */
+    .company .cp_banner {
+        width: 768px;
+        height: 300px;
+        background-size: 100%;
+    }
+
+    .cp_banner>* {
+        margin-left: 10vw;
+    }
+
+    .cp_banner h3 {
+        font-size: 5vw;
+        margin-top: 20vh;
+    }
+
+    .cp_banner p {
+        font-size: 3.5vw;
+    }
+
+    .cp_banner .milton_img {
+        width: 22vw;
+    }
+
+    /* 섹션3 - 밀튼허쉬 옆 텍스트 */
+    .cp_milton {
+        transform: none;
+        top: -5%;
+        left: 33%;
+    }
+
+    .cp_milton a {
+        transform: none;
+        left: 60%;
+        padding: 5px 10px;
+        font-size: 1.5vw;
+    }
+
+    .milton_text strong {
+        font-size: 3.5vw;
+    }
+
+    .milton_text p {
+        font-size: 2vw;
+    }
+
+    .milton_text p:nth-of-type(1),
+    .milton_text p:nth-of-type(2) {
+        display: none;
+    }
+
+    .milton_text p:nth-of-type(3) {
+        display: block;
+        line-height: 20px;
+    }
+
+    /* 섹션3 - 밀튼허쉬 아래 배너 2개 */
+    .company {
+        height: 185vh;
+    }
+
+    .cp_inner {
+        margin-top: -12vh;
+        margin-left: 15vw;
+        height: 60vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cp_line {
+        background-size: 40%;
+        position: relative;
+    }
+
+    .cp_material {
+        background-size: 33%;
+        position: relative;
+    }
+
+    .cp_inner>div {
+        width: 40vw;
+        height: 14vh;
+        margin: 1vh;
+    }
+
+    .cp_line>a,
+    .cp_material>a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 13vh;
+        font-size: 1.25rem;
+        transform: translate(0, 0);
+        background-color: rgb(124, 0, 38);
+        z-index: 2;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .cp_line>a:hover,
+    .cp_material>a:hover {
+        opacity: 1;
+    }
+
+    .line_text>strong,
+    .material_text>strong {
+        text-align: center;
+    }
+
+    .line_text>strong {
+        width: 180px;
+        padding: 15px 0 0 20px;
+        margin-top: 1vh;
+        margin-left: -7vw;
+        font-size: 3vw;
+    }
+
+    .material_text>strong {
+        width: 180px;
+        padding: 16px 0 0 50px;
+        margin-top: 1vh;
+        margin-left: -3vw;
+        font-size: 3vw;
+    }
+
+    .line_text>p,
+    .material_text>p {
+        display: none;
+    }
+
+    /* 섹션3 - 기업 콜라보 - 텍스트 */
+    .collabo_text {
+        margin-top: 0;
+        margin-bottom: 5vh;
+    }
+
+    .collabo_text strong {
+        font-size: 5vw;
+    }
+
+    .collabo_text p {
+        font-size: 3vw;
+    }
+
+    /* 섹션3 - 기업 콜라보 - 이미지 */
+    .collabo_img_up {
+        justify-content: center;
+    }
+
+    .angel,
+    .mcdonald,
+    .etude {
+        width: 30vw;
+        height: 33vh;
+    }
+
+    .imgup_inner {
+        width: 25vw;
+        height: 23vh;
+    }
+
+    .collabo_img_down {
+        justify-content: center;
+    }
+
+    .lotteria,
+    .dunkin,
+    .seoju {
+        width: 30vw;
+        height: 33vh;
+    }
+
+    .imgdown_inner {
+        width: 25vw;
+        height: 20vh;
+    }
+
+    /* 섹션4 미디어 쿼리 */
+
+    .recipe {
+        height: 63vh;
+    }
+
+    .recipe .recipe_banner {
+        margin-top: 10vh;
+        width: 768px;
+        height: 180px;
+        background-size: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recipe .recipe_banner h4 {
+        margin-top: 1rem;
+        font-size: 2rem;
+        margin-right: 0;
+    }
+
+    .recipe .recipe_banner p {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+
+    .recipe .recipe_banner a {
+        margin-right: 0;
+    }
+
+    .recipe_slide {
+        width: 600vw;
+        margin: 0;
+        padding: 5vh 0;
+    }
+
+    .recipe_menu {
+        margin: 0 2vw;
+        width: 25vw;
+        height: 27vh;
+    }
+
+    .menu_inner {
+        width: 22vw;
+        height: 16vh;
+    }
+
+    .menu_inner>a {
+        transform: none;
+        top: -20%;
+        left: 0;
+        height: 150%;
+    }
+
+    .recipe_text {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    /* 푸터 미디어 쿼리 */
+    footer {
+        height: 45vh;
+    }
+
+    .ft_logo {
+        width: 21vw;
+    }
+
+    .sns_logo {
+        width: 22vw;
+    }
+
+    .sns_logo>a {
+        display: inline-block;
+        width: 40px;
+    }
+
+    .sns_logo>a>img {
+        width: 100%;
+    }
+
+    .fotter_bottom {
+        height: 0vh;
+    }
+
+    .ftbottom_right {
+        margin-right: 0;
+        margin-left: 1vw;
+        transform: none;
+        text-align: left;
+        left: 0;
+        top: 90%;
+    }
+
+}

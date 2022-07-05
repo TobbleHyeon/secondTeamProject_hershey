@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>허쉬초콜릿</title>
+    
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/9964751bdb.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script>
+        $(function () {
+            // 섹션2 상품소개 제이쿼리
+            // $('.click1').click(function () {
+            //     $('.pd_line>p , .pd_line>div').removeClass('on')
+            //     $('.pd_wrap1').addClass('on')
+            // })
+            // $('.click2').click(function () {
+            //     $('.pd_line>p, .pd_line>div').removeClass('on')
+            //     $('.pd_wrap2').addClass('on')
+            // })
+            // $('.click3').click(function () {
+            //     $('.pd_line>p, .pd_line>div').removeClass('on')
+            //     $('.pd_wrap3').addClass('on')
+            // })
+            // $('.click4').click(function () {
+            //     $('.pd_line>p, .pd_line>div').removeClass('on')
+            //     $('.pd_wrap4').addClass('on')
+            // })
+            // $('.click5').click(function () {
+            //     $('.pd_line>p, .pd_line>div').removeClass('on')
+            //     $('.pd_wrap5').addClass('on')
+            // })
+            $('.pd_line>p').click(function(){
+                $('.pd_line>p, .pd_line>div').removeClass('on')
+                $(this).addClass('on')
+                $(this).next('div').addClass('on')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 백그라운드 비디오 영역 -->
+        <video autoplay loop muted class="main_video">
+            <source src="./video/video_fix.mp4" type="video/mp4">
+        </video>
+        <!-- 헤더 영역 -->
+        <header class="hd">
+            <h1 class="hd_logo">
+                <a href="#">
+                    <img src="./img/logo_ss_white.svg" alt="허쉬로고">
+                </a>
+            </h1>
+            <nav>
+                <ul class="hd_gnb">
+                    <li>
+                        <a href="#">BRANDS</a>
+                        <ul class="hd_sub">
+                            <li><a href="">HERSHEY&#39;S</a></li>
+                            <li><a href="#">KISSES</a></li>
+                            <li><a href="#">REESE&#39;S</a></li>
+                            <li><a href="#">ICE BREAKERS</a></li>
+                            <li><a href="#">WHOPPERS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">OUR STORY</a></li>
+                    <li><a href="#">RECIPES</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                </ul>
+            </nav>
+            <div class="ham">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+        <!-- 섹션1 영역 -->
+        <section class="main">
+            <div class="main_button">
+                <a href="#">PRODUCTS</a>
+                <a href="#">ABOUT US</a>
+            </div>
+        </section>
+        <!-- 섹션 2 영역 - 상품소개 -->
+        <section class="products">
+            <div class="pd_banner">
+                <h2>Hershey&#39;s Products</h2>
+                <p>행복한 순간을 만드는 즐거운 맛 허쉬 제품라인</p>
+                <a href="#" class="readmore">READ MORE</a>
+            </div>
+            <div class="pd_line">
+                <p class="click1 on">HERSHEY&#39;S</p>
+                <div class="pd_wrap1 on">
+                    <a href="#">GO PRODUCT</a>
+                    <img src="./img/section2/Hershey_logo.png" alt="기본이미지">
+                </div>
+                <p class="click2">KISSES</p>
+                <div class="pd_wrap2">
+                    <a href="#">GO PRODUCT</a>
+                    <img src="./img/section2/kisses_saved.png" alt="키세스">
+                </div>
+                <p class="click3">REESE'S</p>
+                <div class="pd_wrap3">
+                    <a href="#">GO PRODUCT</a>
+                    <img src="./img/section2/Reeses_saved.png" alt="리세스">
+                </div>
+                <p class="click4">WHOPPERS</p>
+                <div class="pd_wrap4">
+                    <a href="#">GO PRODUCT</a>
+                    <img src="./img/section2/whoppers_saved.png" alt="후퍼스">
+                </div>
+                <p class="click5">ICE BREAKERS</p>
+                <div class="pd_wrap5">
+                    <a href="#">GO PRODUCT</a>
+                    <img src="./img/section2/icebreakers_saved.png" alt="아이스브레이커">
+                </div>
+            </div>
+        </section>
+        <!-- 섹션 3 영역 - 기업소개 -->
+        <section class="company">
+            <div class="cp_banner">
+                <h3>About Us</h3>
+                <p>허쉬 소개</p>
+                <div class="milton_img">
+                    <img src="./img/section3/milton_hershey.png" alt="밀튼허쉬_초상화">
+                </div>
+            </div>
+            <div class="milton_inner">
+                <div class="cp_milton">
+                    <a href="#" class="readmore">READ MORE</a>
+                    <div class="milton_text">
+                        <strong>행복 중심의 경영 철학</strong>
+                        <p>
+                            밀튼 허쉬&#40;Milton Hershey&#41;가 생각한 행복이란 단순하면서도 맛있는 재료와<br>
+                            간단한 공정을 거친 허쉬 제품을 사람들이 나눠 즐기면서 주고받는 미소로부터 시작됩니다.
+                        </p>
+                        <p>
+                            그 철학은 밀튼에게 매우 종요한 것이었으며 허쉬컴퍼니 역시 지금까지 매우 중요하게 여기고 있습니다.
+                        </p>
+                        <p>밀튼 허쉬&#40;Milton Hershey&#41;가 생각한 행복이란<br>
+                            허쉬 제품을 사람들이 나눠 즐기면서 주고받는 미소로부터 시작됩니다.</p>
+                    </div>
+                </div>
+                <div class="cp_inner">
+                    <div class="cp_line">
+                        <a href="#" class="readmore">READ MORE</a>
+                        <div class="line_text">
+                            <strong>허쉬컴퍼니만의 완벽한 공정과정</strong>
+                            <p>
+                                밀튼 허쉬는 누구나 맛있는 먹거리를 즐길 수 있게끔<br>
+                                신선하고 맛있는 재료를 사용하기 시작했습니다.
+                            </p>
+                            <p>
+                                그의 철학과 공정과정은 오늘날까지도 이어져오고 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cp_material">
+                        <a href="#" class="readmore">READ MORE</a>
+                        <div class="material_text">
+                            <strong>심플한 재료, 행복의 맛!</strong>
+                            <p>
+                                허쉬컴퍼니의 &#39;심플함&#40;SIMPLE&#41;&#39;을
+                                향한 신념은<br> 재료로부터 출발합니다.
+                            </p>
+                            <p>
+                                허쉬 제품은 천연색소를 사용하며 인공조미료,<br>
+                                방부제, 감미료 등의 사용을 지양합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cp_collabo">
+                    <div class="collabo_text">
+                        <strong>다양한 기업들과<br>
+                            함께하는 달콤함
+                        </strong>
+                        <p>여러분의 행복한 순간에 달콤함을 다양하게 더 해 보세요&#33;</p>
+                    </div>
+                    <div class="collabo_img_up">
+                        <div class="angel">
+                            <div class="imgup_inner">
+                                <img src="./img/section3/angelinus.png" alt="엔제리너스">
+                            </div>
+                            <p>HERSHEY&#39;S x Angel&#45;in&#45;us</p>
+                        </div>
+                        <div class="mcdonald">
+                            <div class="imgup_inner">
+                                <img src="./img/section3/mcdonald.png" alt="맥도날드">
+                            </div>
+                            <p>HERSHEY&#39;S x McDonald&#39;s</p>
+                        </div>
+                        <div class="etude">
+                            <div class="imgup_inner">
+                                <img src="./img/section3/etude.png" alt="에뛰드">
+                            </div>
+                            <p>HERSHEY&#39;S x ETUDE</p>
+                        </div>
+                    </div>
+                    <div class="collabo_img_down">
+                        <div class="lotteria">
+                            <div class="imgdown_inner">
+                                <img src="./img/section3/lotteria.png" alt="롯데리아">
+                            </div>
+                            <p>HERSHEY&#39;S x LOTTERIA</p>
+                        </div>
+                        <div class="dunkin">
+                            <div class="imgdown_inner">
+                                <img src="./img/section3/dunkin.png" alt="던킨">
+                            </div>
+                            <p>HERSHEY&#39;S x DUNKIN</p>
+                        </div>
+                        <div class="seoju">
+                            <div class="imgdown_inner">
+                                <img src="./img/section3/jeju_greentea.png" alt="서주제과">
+                            </div>
+                            <p>HERSHEY&#39;S x 서주제과</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- 섹션 4 영역 - 레시피 소개 -->
+        <section class="recipe">
+            <div class="recipe_banner">
+                <h4>Hershey&#39;s Recipes</h4>
+                <p>허쉬에서 제안하는 허쉬 즐기는 법<br>
+                    가족들과 함께 행복함을 누리세요&#33;
+                </p>
+                <a href="#" class="readmore">READ MORE</a>
+            </div>
+            <div class="recipe_slide">
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide1.png" alt="초콜릿 스월 초코칩 치즈 케이크" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">초콜릿 스월 초코칩<br> 치즈 케이크</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide2.png" alt="피넛버터 블라썸" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">피넛버터 블라썸</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide3.png" alt="두툼한 마카다미아 바" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">두툼한 마카다미아 바</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide4.png" alt="허쉬 허그 & 키세스 크로아상" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">허쉬 허그 &#38;<br>키세스 크로아상</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide5.png" alt="퍼펙틀리 초콜릿 초코 프로스팅" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">&#34;퍼펙틀리 초콜릿&#34;<br> 초코 프로스팅</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide6.png" alt="크리미 밀크 초콜릿 푸딩 파이" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">크리미 밀크 초콜릿<br>푸딩 파이</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide7.png" alt="브룩사이드 크런치 클러스터 쿠키 딜라잇" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">브룩사이드 크런치<br>클러스터 쿠키 딜라잇</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide8.png" alt="스모어" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">스모어</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide9.png" alt="초콜릿컵 브라우니 선데이" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">초콜릿컵 브라우니 선데이</p>
+                </div>
+                <div class="recipe_menu">
+                    <p class="menu_inner">
+                        <a href="#">GO RECIPE</a>
+                        <img src="./img/section4/slide10.png" alt="초콜릿 스월 초코칩 치즈 케이크" class="recipe_img">
+                    </p>
+                    <p class="recipe_text">리세스 피넛버터<br>블론디컵</p>
+                </div>
+            </div>
+        </section>
+        <!-- 푸터 영역 -->
+        <footer>
+            <div class="footer_top">
+                <div class="ft_logo">
+                    <img src="./img/footer/logo_footer.png" alt="허쉬로고">
+                </div>
+                <div class="sns_logo">
+                    <a href="#"><img src="./img/footer/icon_1s.png" alt="페이스북"></a>
+                    <a href="#"><img src="./img/footer/icon_2s.png" alt="인스타그램"></a>
+                    <a href="#"><img src="./img/footer/icon_3s.png" alt="유튜브"></a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <select name="Familysite" class="familysite">
+                    <option value="#">THE HERSHEY COMPANY</option>
+                    <option value="#">CONTACT US</option>
+                    <option value="#">THE HERSHEY CHOCOLATE WORLD ATTRACTION</option>
+                    <option value="#">BAKE WITH US</option>
+                    <option value="#">SITE POLICY</option>
+                </select>
+                <div class="ftbottom_left">
+                    <p>
+                        씨에스에이치 푸드 한국지점&#124; 대표자 &#58; 박선영<br>
+                        서울특별시 중구 삼일대로 343, 11층 &#40;저동1가&#44; 대신파이낸스센터&#41; &#124;사업자등록번호 &#58; 101-84-03727<br>
+                        Copyright by 2017 HERSHEY INTERNATIONAL&#46; ALL RIGHTS RESERVED<br>
+                    </p>
+                </div>
+                <div class="ftbottom_right">
+                    <p>
+                        수입판매원 고객문의번호 안내&#58;<br>
+                        롯데제과 고객지원센터&#58; 080-024-6060 &#40;허쉬 바&#44; 키세스&#44; 너겟&#44; 미니어쳐&#44; 아이스브레이커스 외&#41;<br>
+                        미성패밀리 소비자 상담실&#58; 02-723-8175 &#40;후퍼스&#44; 허쉬 코코아&#44; 시럽&#44; 베이킹 칩&#44; 쿠키 외&#41;<br>
+                        농심 고객상담팀&#58; 080-023-5181 &#40;리세스 외&#41;<br>
+                        ㈜코스트코 코리아&#58; 1899-9900<br>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
